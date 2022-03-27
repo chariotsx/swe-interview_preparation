@@ -56,7 +56,7 @@ class RotateArraySolutionTest {
 
     for (int i = 0; i < expectedArray.length; i++) {
       if (expectedArray[i] != solutionArray[i]) {
-        break;
+        return false;
       }
 
       result = true;

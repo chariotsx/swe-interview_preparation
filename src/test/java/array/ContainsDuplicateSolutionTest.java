@@ -28,7 +28,7 @@ class ContainsDuplicateSolutionTest {
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
     for (ContainsDuplicateSolution solution : containsDuplicateSolutionArrayList) {
       Boolean result = solution.solve();

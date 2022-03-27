@@ -28,7 +28,7 @@ class BestTimeToBuyAndSellStockIISolutionTest {
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
     for (BestTimeToBuyAndSellStockIISolution solution : bestTimeToBuyAndSellStockIISolutionArrayList) {
       int result = solution.solve();

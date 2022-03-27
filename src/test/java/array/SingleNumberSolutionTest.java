@@ -28,7 +28,7 @@ class SingleNumberSolutionTest {
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
     for (SingleNumberSolution solution : singleNumberSolutionArrayList) {
       Integer result = solution.solve();

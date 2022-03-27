@@ -7,35 +7,35 @@ import org.junit.jupiter.api.Test;
 
 class PlusOneSolutionTest {
 
-  private ArrayList<PlusOneSolution> plusOneSolutionSolutionArrayList;
+  private ArrayList<PlusOneSolution> plusOneSolutionArrayList;
   private ArrayList<int[]> expectedResults;
 
   @BeforeEach
   void setUp() {
-    plusOneSolutionSolutionArrayList = new ArrayList<>();
+    plusOneSolutionArrayList = new ArrayList<>();
     expectedResults = new ArrayList<>();
 
-    plusOneSolutionSolutionArrayList.add(
+    plusOneSolutionArrayList.add(
         new PlusOneSolution(new int[]{1, 2, 2, 1}));
     expectedResults.add(new int[]{1, 2, 2, 2});
 
-    plusOneSolutionSolutionArrayList.add(
+    plusOneSolutionArrayList.add(
         new PlusOneSolution(new int[]{9, 9, 9}));
     expectedResults.add(new int[]{1, 0, 0, 0});
 
-    plusOneSolutionSolutionArrayList.add(
+    plusOneSolutionArrayList.add(
         new PlusOneSolution(new int[]{7, 6, 4, 3, 1}));
     expectedResults.add(new int[] {7, 6, 4, 3, 2});
 
-    plusOneSolutionSolutionArrayList.add(
+    plusOneSolutionArrayList.add(
         new PlusOneSolution(new int[]{9}));
     expectedResults.add(new int[] {1, 0});
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
-    for (PlusOneSolution solution : plusOneSolutionSolutionArrayList) {
+    for (PlusOneSolution solution : plusOneSolutionArrayList) {
       int[] result = solution.solve();
       assert this.compareSolutionResultAndExpectedValues(result, expectedResults.get(index)) :
           "Result: " + Arrays.toString(result) + " Expected: " +
@@ -53,7 +53,7 @@ class PlusOneSolutionTest {
     if (solutionResult.length == expectedResult.length) {
       for (int i = 0; i < expectedResult.length; i++) {
         if (expectedResult[i] != solutionResult[i]) {
-          break;
+          return false;
         }
       }
 

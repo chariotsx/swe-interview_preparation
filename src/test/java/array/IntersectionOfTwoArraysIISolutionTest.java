@@ -29,7 +29,7 @@ class IntersectionOfTwoArraysIISolutionTest {
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
     for (IntersectionOfTwoArraysIISolution solution : intersectionOfTwoArraysIISolutionArrayList) {
       int[] result = solution.solve();
@@ -49,7 +49,7 @@ class IntersectionOfTwoArraysIISolutionTest {
     if (solutionResult.length == expectedResult.length) {
       for (int i = 0; i < expectedResult.length; i++) {
         if (expectedResult[i] != solutionResult[i]) {
-          break;
+          return false;
         }
       }
 
