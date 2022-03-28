@@ -17,7 +17,7 @@ class ValidSudokuSolutionTest {
     expectedResults = new ArrayList<>();
 
     solutions.add(
-        new ValidSudokuSolution(new char[][]{
+        new ValidSudokuSolution(new char[][] {
             {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
             {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
             {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -31,7 +31,7 @@ class ValidSudokuSolutionTest {
     expectedResults.add(true);
 
     solutions.add(
-        new ValidSudokuSolution(new char[][]{
+        new ValidSudokuSolution(new char[][] {
             {'8', '3', '.', '.', '7', '.', '.', '.', '.'},
             {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
             {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -45,7 +45,7 @@ class ValidSudokuSolutionTest {
     expectedResults.add(false);
 
     solutions.add(
-        new ValidSudokuSolution(new char[][]{
+        new ValidSudokuSolution(new char[][] {
             {'.', '.', '.', '.', '5', '.', '.', '1', '.'},
             {'.', '4', '.', '3', '.', '.', '.', '.', '.'},
             {'.', '.', '.', '.', '.', '3', '.', '.', '1'},

@@ -18,8 +18,8 @@ public class TwoSumSolution extends Solution<int[]> {
 
   @Override
   protected void initializeSolution() {
-    this.title = "Move Zeroes";
-    this.url = "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/";
+    this.title = "Two Sum";
+    this.url = "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/";
     this.notes = "Less than O(n^2) time complexity";
   }
 
