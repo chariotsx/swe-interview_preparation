@@ -76,7 +76,7 @@ class RotateImageSolutionTest {
   @ParameterizedTest
   @ValueSource(ints = {2})
     // Number of test
-  void solve2Test(int numTest) {
+  void solveTest(int numTest) {
     this.solutions.get(numTest - 1).solve();
     assert compareSolutionResultAndExpectedValues(this.solutions.get(numTest - 1).getInput(),
         this.expectedResults.get(numTest - 1)) :
