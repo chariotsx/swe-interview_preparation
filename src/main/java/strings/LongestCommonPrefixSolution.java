@@ -14,7 +14,7 @@ public class LongestCommonPrefixSolution extends Solution<String> {
 
   @Override
   protected void initializeSolution() {
-      this.title = "Longest Common Prefix";
+    this.title = "Longest Common Prefix";
     this.url = "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/";
     this.notes = "If theres is no common prefix, return empty string";
   }
@@ -52,3 +52,4 @@ public class LongestCommonPrefixSolution extends Solution<String> {
 
     return result;
   }
+}

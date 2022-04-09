@@ -18,7 +18,7 @@ public class LinkedList<T> {
     this.tail = this.head;
   }
 
-  public void AddNode(T value) {
+  public void addNode(T value) {
     if (this.head == null) {
       this.head = new LinkedListNode<T>(value);
       this.tail = this.head;
@@ -30,7 +30,7 @@ public class LinkedList<T> {
     }
   }
 
-  public LinkedListNode<T> GetNodeAt(int i) {
+  public LinkedListNode<T> getNodeAt(int i) {
     if (i >= this.length()) {
       return null;
     }
@@ -44,9 +44,9 @@ public class LinkedList<T> {
     return temp;
   }
 
-  public void AddArray(T[] array) {
+  public void addArray(T[] array) {
     for (T item : array) {
-      this.AddNode(item);
+      this.addNode(item);
     }
   }
 

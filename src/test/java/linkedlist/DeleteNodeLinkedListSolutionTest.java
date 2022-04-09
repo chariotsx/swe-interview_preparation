@@ -18,11 +18,11 @@ class DeleteNodeLinkedListSolutionTest {
 
     // Test 1
     LinkedList<Integer> linkedListTest1 = new LinkedList<>();
-    linkedListTest1.AddArray(new Integer[]{1, 2, 3, 4, 5});
-    LinkedListNode<Integer> nodeToDeleteTest1 = linkedListTest1.GetNodeAt(3);
+    linkedListTest1.addArray(new Integer[]{1, 2, 3, 4, 5});
+    LinkedListNode<Integer> nodeToDeleteTest1 = linkedListTest1.getNodeAt(3);
 
     LinkedList<Integer> expectedLinkedListTest1 = new LinkedList<>();
-    expectedLinkedListTest1.AddArray(new Integer[]{1, 2, 3, 5});
+    expectedLinkedListTest1.addArray(new Integer[]{1, 2, 3, 5});
 
     solutions.add(
         new DeleteNodeLinkedListSolution(linkedListTest1, nodeToDeleteTest1));
@@ -30,11 +30,11 @@ class DeleteNodeLinkedListSolutionTest {
 
     // Test 2
     LinkedList<Integer> linkedListTest2 = new LinkedList<>();
-    linkedListTest2.AddArray(new Integer[]{4, 5, 1, 9});
-    LinkedListNode<Integer> nodeToDeleteTest2 = linkedListTest2.GetNodeAt(1);
+    linkedListTest2.addArray(new Integer[]{4, 5, 1, 9});
+    LinkedListNode<Integer> nodeToDeleteTest2 = linkedListTest2.getNodeAt(1);
 
     LinkedList<Integer> expectedLinkedListTest2 = new LinkedList<>();
-    expectedLinkedListTest2.AddArray(new Integer[]{4, 1, 9});
+    expectedLinkedListTest2.addArray(new Integer[]{4, 1, 9});
 
     solutions.add(
         new DeleteNodeLinkedListSolution(linkedListTest2, nodeToDeleteTest2));
@@ -42,11 +42,11 @@ class DeleteNodeLinkedListSolutionTest {
 
     // Test 3
     LinkedList<Integer> linkedListTest3 = new LinkedList<>();
-    linkedListTest3.AddArray(new Integer[]{4, 5, 1, 9});
-    LinkedListNode<Integer> nodeToDeleteTest3 = linkedListTest3.GetNodeAt(2);
+    linkedListTest3.addArray(new Integer[]{4, 5, 1, 9});
+    LinkedListNode<Integer> nodeToDeleteTest3 = linkedListTest3.getNodeAt(2);
 
     LinkedList<Integer> expectedLinkedListTest3 = new LinkedList<>();
-    expectedLinkedListTest3.AddArray(new Integer[]{4, 5, 9});
+    expectedLinkedListTest3.addArray(new Integer[]{4, 5, 9});
 
     solutions.add(
         new DeleteNodeLinkedListSolution(linkedListTest3, nodeToDeleteTest3));
