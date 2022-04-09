@@ -54,7 +54,7 @@ class DeleteNodeLinkedListSolutionTest {
   }
 
   @Test
-  void solve() {
+  void solveTest() {
     int index = 0;
     for (DeleteNodeLinkedListSolution solution : this.solutions) {
       solution.solve();

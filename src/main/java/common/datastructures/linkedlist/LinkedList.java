@@ -1,8 +1,10 @@
 package common.datastructures.linkedlist;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class LinkedList<T> {
 
   private LinkedListNode<T> head;
@@ -16,6 +18,14 @@ public class LinkedList<T> {
   public LinkedList(T value) {
     this.head = new LinkedListNode<T>(value);
     this.tail = this.head;
+  }
+
+  public LinkedList(T[] array) {
+    this.addArray(array);
+  }
+
+  public LinkedListNode<T> getHeadNode() {
+    return this.head;
   }
 
   public void addNode(T value) {
@@ -48,6 +58,36 @@ public class LinkedList<T> {
     for (T item : array) {
       this.addNode(item);
     }
+  }
+
+  public void deleteNodeAt(int i) {
+    int listLength = this.length();
+    if (listLength == 0 || i < 0 || i >= listLength) {
+      return;
+    }
+
+    if (i == 0) {
+      this.head = this.head.getNextNode();
+
+      if (this.tail != null) {
+        this.tail = this.tail.getNextNode();
+      }
+
+      return;
+    }
+
+    int nodeBeforeRemovedIndex = i - 1;
+
+    LinkedListNode<T> temp = this.head;
+    while (temp != null && nodeBeforeRemovedIndex > 0) {
+      nodeBeforeRemovedIndex--;
+      temp = temp.getNextNode();
+    }
+
+    if (temp.getNextNode().getNextNode() == null) {
+      this.tail = temp;
+    }
+    temp.setNextNode(temp.getNextNode().getNextNode());
   }
 
   public int length() {
