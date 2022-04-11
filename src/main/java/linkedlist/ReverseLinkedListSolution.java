@@ -6,11 +6,11 @@ import common.datastructures.linkedlist.LinkedListNode;
 import lombok.Getter;
 
 @Getter
-public class ReverseLinkedList extends Solution<LinkedListNode> {
+public class ReverseLinkedListSolution extends Solution<LinkedListNode> {
 
   private final LinkedList<Integer> list;
 
-  public ReverseLinkedList(LinkedList<Integer> list) {
+  public ReverseLinkedListSolution(LinkedList<Integer> list) {
     this.list = list;
   }
 

@@ -1,15 +1,13 @@
 package linkedlist;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import common.datastructures.linkedlist.LinkedList;
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class ReverseLinkedListTest {
+class ReverseLinkedListSolutionTest {
 
-  private ArrayList<ReverseLinkedList> solutions;
+  private ArrayList<ReverseLinkedListSolution> solutions;
   private ArrayList<LinkedList<Integer>> expectedResults;
 
   @BeforeEach
@@ -22,7 +20,7 @@ class ReverseLinkedListTest {
     LinkedList<Integer> expectedLinkedListTest1 = new LinkedList<>(new Integer[]{5, 4, 3, 2, 1});
 
     solutions.add(
-        new ReverseLinkedList(linkedListTest1));
+        new ReverseLinkedListSolution(linkedListTest1));
     expectedResults.add(expectedLinkedListTest1);
 
     // Test 2
@@ -30,7 +28,7 @@ class ReverseLinkedListTest {
     LinkedList<Integer> expectedLinkedListTest2 = new LinkedList<>();
 
     solutions.add(
-        new ReverseLinkedList(linkedListTest2));
+        new ReverseLinkedListSolution(linkedListTest2));
     expectedResults.add(expectedLinkedListTest2);
 
     // Test 3
@@ -38,14 +36,14 @@ class ReverseLinkedListTest {
     LinkedList<Integer> expectedLinkedListTest3 = new LinkedList<>(new Integer[]{2, 1});
 
     solutions.add(
-        new ReverseLinkedList(linkedListTest3));
+        new ReverseLinkedListSolution(linkedListTest3));
     expectedResults.add(expectedLinkedListTest3);
   }
 
   @Test
   void solveTest() {
     int index = 0;
-    for (ReverseLinkedList solution : this.solutions) {
+    for (ReverseLinkedListSolution solution : this.solutions) {
       solution.solve();
       assert solution.getList().equals(this.expectedResults.get(index)) :
           "Test[" + (index + 1) + "] " +
