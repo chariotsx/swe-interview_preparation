@@ -44,7 +44,7 @@ class MergeTwoSortedListSolutionTest {
 
     // Test 4
     LinkedList<Integer> linkedList1Test4 = new LinkedList<>();
-    LinkedList<Integer> linkedList2Test4= new LinkedList<>(new Integer[]{0});
+    LinkedList<Integer> linkedList2Test4 = new LinkedList<>(new Integer[]{0});
     LinkedList<Integer> expectedLinkedListTest4 = new LinkedList<>(new Integer[]{0});
 
     solutions.add(
