@@ -17,8 +17,16 @@ public class Tree<T> {
     this.root = new TreeNode<T>(value);
   }
 
-  public Tree (T[] array) {
+  public Tree(T[] array) {
     this.root = this.insertLevelOrder(array, this.root, 0);
+  }
+
+  public TreeNode<T> getRightNode() {
+    return this.root.getRightNode();
+  }
+
+  public TreeNode<T> getLeftNode() {
+    return this.root.getLeftNode();
   }
 
   public TreeNode<T> insertLevelOrder(T[] array, TreeNode<T> root, int i) {
