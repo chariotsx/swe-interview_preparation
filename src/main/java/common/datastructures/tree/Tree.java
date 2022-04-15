@@ -1,5 +1,9 @@
 package common.datastructures.tree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -62,5 +66,30 @@ public class Tree<T> {
     }
 
     return true;
+  }
+
+  public String toString() {
+    Queue<TreeNode<T>> treeQueue = new LinkedList<>();
+    List<T> resultList = new ArrayList<>();
+
+
+    if (this.root != null) {
+      treeQueue.add(this.root);
+
+      while (!treeQueue.isEmpty()) {
+        TreeNode<T> tempRoot = treeQueue.peek();
+
+        resultList.add(tempRoot == null ? null : tempRoot.getValue());
+
+        if (tempRoot != null) {
+          treeQueue.add(tempRoot.getLeftNode());
+          treeQueue.add(tempRoot.getRightNode());
+        }
+
+        treeQueue.remove();
+      }
+    }
+
+    return resultList.toString();
   }
 }
