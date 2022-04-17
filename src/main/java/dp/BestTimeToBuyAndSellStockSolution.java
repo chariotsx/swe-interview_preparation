@@ -6,8 +6,6 @@ import java.util.Map;
 
 public class BestTimeToBuyAndSellStockSolution extends Solution<Integer> {
 
-  private static final Map<Integer, Integer> memoizationMap = new HashMap<>();
-
   private final int[] prices;
 
   public BestTimeToBuyAndSellStockSolution(int[] prices) {
